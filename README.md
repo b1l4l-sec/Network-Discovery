@@ -4,7 +4,7 @@
 [![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react)](https://reactjs.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-A small React + Vite project for network discovery and visualization. This README replaces the starter template and adds sections, usage instructions and space for the screenshots and PNG images you uploaded.
+A front-end application built with React + Vite that visualizes network discovery data — topology, scan results and device details. This README replaces the starter template and embeds the three screenshots you added to the repository.
 
 ---
 
@@ -16,6 +16,7 @@ A small React + Vite project for network discovery and visualization. This READM
 - [Quick start](#quick-start)  
 - [Development](#development)  
 - [Build & Deploy](#build--deploy)  
+- [Add or update screenshots](#add-or-update-screenshots)  
 - [Contributing](#contributing)  
 - [License](#license)
 
@@ -23,53 +24,45 @@ A small React + Vite project for network discovery and visualization. This READM
 
 ## Overview
 
-Network-Discovery is a front-end application built with React + Vite that visualizes network discovery results (scans, topology, device details). Use it as a visualization tool or as the UI for your network scanning back-end.
+Network-Discovery is a lightweight UI for visualizing results from network scanning and discovery tools. It can be used as a standalone visualizer or a front-end for a scanning back-end. It focuses on clear device listing, interactive topology maps and detailed per-device scan results.
 
 ---
 
 ## Features
 
-- Interactive network topology visualization  
-- Device details and scan results views  
-- Filter and search devices on the network map  
-- Export/import of scan results (JSON/CSV)  
-- Extensible UI components for custom data sources
+- Interactive network topology and device map  
+- Device details and scan results view  
+- Search and filter devices by IP, MAC, vendor or status  
+- Export/import scan results (JSON/CSV)  
+- Easily extendable components to connect to a backend API
 
 ---
 
 ## Screenshots
 
-Place your PNG files either at the repo root or under `public/images/` (recommended: `public/images/`). The images will render automatically on GitHub. Update the filenames below if your images use different names or paths.
+I embedded the three screenshots you added. They will render when the image files are present in the repository (root) or under `public/` (if you placed them there). If you put images in `public/images/`, update the paths below accordingly.
 
-Example filenames used in this README (replace with your actual filenames if needed):
-- `network-overview.png` (or `public/images/network-overview.png`)
-- `scan-results.png` (or `public/images/scan-results.png`)
-- `device-details.png` (or `public/images/device-details.png`)
-- `topology.png` (or `public/images/topology.png`)
+(If the filenames you used differ from the examples below, replace them with the exact filenames.)
 
-### App Home / Overview
-![Network Overview](public/images/network-overview.png)
+### Home (main dashboard)
+![Home Screen](HomeScreen.png)
 
-(If you placed the images in repo root, use:)
-![Network Overview](network-overview.png)
+### Scan results / timeline
+![Scan Results](ScanResults.png)
 
-### Scan Results
-![Scan Results](public/images/scan-results.png)
+### Device details / insights
+![Device Details](DeviceDetails.png)
 
-### Device / Details View
-![Device Details](public/images/device-details.png)
-
-### Topology Map
-![Topology Map](public/images/topology.png)
-
-> Tip: If GitHub does not render an image, double-check the file path and filename are exact (case-sensitive).
+> Note: If your images are located in `public/images/`, use:
+> `![Home Screen](public/images/HomeScreen.png)` etc.
 
 ---
 
 ## Quick start
 
-Prerequisites:
-- Node.js 16+ and npm or yarn
+Requirements:
+- Node.js v16+ (or latest LTS)
+- npm or yarn
 - Git
 
 Clone and install:
@@ -80,100 +73,3 @@ cd Network-Discovery
 npm install
 # or
 # yarn install
-```
-
-Run dev server:
-
-```bash
-npm run dev
-# or
-# yarn dev
-```
-
-Open http://localhost:5173 to view the app.
-
----
-
-## Development
-
-- Source code lives in `src/`
-- Public assets (images, static files) go in `public/` (recommended `public/images/`)
-- Linting and formatting via ESLint / Prettier (see `package.json`)
-
-Common scripts (from `package.json`):
-
-```bash
-npm run dev       # start development server
-npm run build     # produce production build
-npm run preview   # preview built site locally
-npm run lint      # run linter
-```
-
----
-
-## Build & Deploy
-
-Build the app:
-
-```bash
-npm run build
-```
-
-Deploy the contents of the `dist/` folder to your static hosting provider (Netlify, GitHub Pages, S3, etc.).
-
-For GitHub Pages (example):
-
-```bash
-npm run build
-# then push dist content to gh-pages branch or use your CI to publish
-```
-
----
-
-## How to add the images to the repo (recommended)
-
-1. Put images in `public/images/` (recommended) or repo root.
-2. Stage and commit:
-
-```bash
-git add public/images/network-overview.png public/images/scan-results.png
-git commit -m "docs: add network screenshots"
-```
-
-3. Push to GitHub (recommended: new branch then PR):
-
-```bash
-git checkout -b docs/add-screenshots
-git push -u origin docs/add-screenshots
-# then open a PR on GitHub and merge
-```
-
----
-
-## Contributing
-
-Contributions welcome — please fork the repo and open a PR.  
-Recommended workflow:
-
-1. Fork and clone
-2. Create a feature branch
-3. Make changes and add tests
-4. Open a Pull Request describing your changes
-
----
-
-## License
-
-MIT — see the `LICENSE` file.
-
----
-
-If you want, I can:
-- 1) Commit this README update to a new branch and open a Pull Request (please confirm branch name), or  
-- 2) Commit directly to `main` (only recommended if you're the sole maintainer), or  
-- 3) Produce the exact image filenames and the git commands to add them from your local machine.
-
-Please confirm:
-- The exact image filenames and paths you uploaded (e.g., `public/images/VPNDataWireshark.png`), or
-- If you want me to proceed and create a PR with placeholder paths (you can later upload images to match), or
-- If you'd rather paste this README locally and push yourself (I can give the exact git commands).
