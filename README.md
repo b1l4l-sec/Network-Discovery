@@ -4,19 +4,19 @@
 [![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react)](https://reactjs.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-A front-end application built with React + Vite that visualizes network discovery data — topology, scan results and device details. This README replaces the starter template and embeds the three screenshots you added to the repository.
+A lightweight front-end application (React + Vite) for visualizing network discovery results — topology maps, scan results and device details. This README replaces the starter template and integrates the screenshots you added to the repository.
 
 ---
 
-## Table of Contents
+## Table of contents
 
 - [Overview](#overview)  
 - [Features](#features)  
 - [Screenshots](#screenshots)  
 - [Quick start](#quick-start)  
 - [Development](#development)  
-- [Build & Deploy](#build--deploy)  
-- [Add or update screenshots](#add-or-update-screenshots)  
+- [Build & deploy](#build--deploy)  
+- [Add / update screenshots](#add--update-screenshots)  
 - [Contributing](#contributing)  
 - [License](#license)
 
@@ -24,46 +24,47 @@ A front-end application built with React + Vite that visualizes network discover
 
 ## Overview
 
-Network-Discovery is a lightweight UI for visualizing results from network scanning and discovery tools. It can be used as a standalone visualizer or a front-end for a scanning back-end. It focuses on clear device listing, interactive topology maps and detailed per-device scan results.
+Network-Discovery provides a UI to inspect results from network scans and discovery tools. It focuses on:
+
+- visual network topology,
+- per-device details and scan history,
+- filtering/searching devices,
+- exporting/importing scan data.
+
+This repository contains the front-end UI. It can be used standalone (visualizer) or connected to a scanning back-end.
 
 ---
 
 ## Features
 
-- Interactive network topology and device map  
-- Device details and scan results view  
-- Search and filter devices by IP, MAC, vendor or status  
-- Export/import scan results (JSON/CSV)  
-- Easily extendable components to connect to a backend API
+- Interactive topology map with zoom/pan  
+- Device list with search, filter, and details panel  
+- Scan results timeline and charts  
+- Import/export scan data (JSON/CSV)  
+- Extensible components for custom endpoints
 
 ---
 
 ## Screenshots
 
-I embedded the three screenshots you added. They will render when the image files are present in the repository (root) or under `public/` (if you placed them there). If you put images in `public/images/`, update the paths below accordingly.
+The three screenshots you uploaded are embedded below. They are located in the repository root (HomeScreen.png, ScanScreen.png, TopologyScreen.png) and will render on GitHub as long as the filenames match exactly (case-sensitive).
 
-(If the filenames you used differ from the examples below, replace them with the exact filenames.)
-
-### Home (main dashboard)
+### Home / Dashboard
 ![Home Screen](HomeScreen.png)
 
-### Scan results / timeline
-![Scan Results](ScanResults.png)
+### Scan Results
+![Scan Screen](ScanScreen.png)
 
-### Device details / insights
-![Device Details](DeviceDetails.png)
-
-> Note: If your images are located in `public/images/`, use:
-> `![Home Screen](public/images/HomeScreen.png)` etc.
+### Topology Map
+![Topology Screen](TopologyScreen.png)
 
 ---
 
 ## Quick start
 
 Requirements:
-- Node.js v16+ (or latest LTS)
+- Node.js v16+ (LTS recommended)
 - npm or yarn
-- Git
 
 Clone and install:
 
@@ -73,3 +74,87 @@ cd Network-Discovery
 npm install
 # or
 # yarn install
+```
+
+Run the dev server:
+
+```bash
+npm run dev
+# or
+# yarn dev
+```
+
+Open http://localhost:5173 (or the port shown in the terminal).
+
+---
+
+## Development
+
+- Source: `src/`  
+- Public assets & favicon: `public/` (static images may also be placed in `public/images/`)  
+- Styling using Tailwind CSS (see `tailwind.config.js`)  
+- Linting via ESLint (`eslint.config.js`)
+
+Common scripts:
+
+```bash
+npm run dev      # start dev server
+npm run build    # production build
+npm run preview  # preview production build
+npm run lint     # run linter
+```
+
+---
+
+## Build & deploy
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+Deploy the contents of `dist/` to your static host (Netlify, GitHub Pages, S3, etc.).
+
+---
+
+## Add / update screenshots
+
+If you need to change or add screenshots:
+
+1. Place images in the repository root or `public/images/` (recommended).
+2. Update the image links in this README if you move them to `public/images/` (e.g., `public/images/HomeScreen.png`).
+3. Commit and push:
+
+```bash
+git checkout -b docs/add-screenshots
+git add README.md HomeScreen.png ScanScreen.png TopologyScreen.png
+git commit -m "docs: update README and embed screenshots"
+git push -u origin docs/add-screenshots
+```
+
+Open a Pull Request and merge when ready.
+
+---
+
+## Contributing
+
+Contributions are welcome. Suggested workflow:
+
+1. Fork the repo  
+2. Create a feature branch (e.g., `feature/my-change`)  
+3. Make changes and add tests if applicable  
+4. Open a Pull Request describing the change
+
+---
+
+## License
+
+MIT — see `LICENSE` for details.
+
+---
+
+If you want, I can prepare the branch and the commit for you (I'll provide the exact patch and commands). Tell me whether you want me to:
+- create a branch + PR instructions (I give the commands you run), or
+- produce a patch file you can apply locally, or
+- nothing — you'll paste and push yourself.
